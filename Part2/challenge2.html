@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Code challenge 2</h1>
+  </body>
+  <script>
+    const calcTip = (bill_value) => {
+      return bill_value >= 50 && bill_value <= 300 ? bill_value * 0.15 : bill_value * 0.2;
+    };
+    [122, 555, 44].forEach((bill) => {
+      console.log(
+        `The bill was ${bill}, the tip was ${calcTip(bill).toFixed(2)},and the total value ${(
+          calcTip(bill) + bill
+        ).toFixed(2)}`,
+      );
+    });
+  </script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Code challenge 3</h1>
+  </body>
+  <script>
+    const user1 = {
+      fullName: 'Mark',
+      mass: 78,
+      height: 1.69,
+    };
+    const user2 = {
+      fullName: 'John Smith',
+      mass: 92,
+      height: 1.95,
+    };
+    const caculateBMI = (obj) => {
+      return (obj.mass / (obj.height * obj.height)).toFixed(2);
+    };
+    let string =
+      caculateBMI(user1) > caculateBMI(user2)
+        ? `${user1.fullName} BMI (${caculateBMI(user1)}) is higher than ${
+            user2.fullName
+          } (${caculateBMI(user2)})!`
+        : caculateBMI`${user2.fullName} BMI (${caculateBMI(user2)}) is higher than ${
+            user1.fullName
+          } (${caculateBMI(user1)})!`;
+    console.log('🚀 ~ result:', string);
+  </script>
+</html>

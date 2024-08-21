@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Code challenge 4</h1>
+  </body>
+  <script>
+    const is_tip_15 = (bill_value) => {
+      return bill_value >= 50 && bill_value <= 300;
+    };
+    //Test case 1
+    let bill_value = 275;
+    let bill_tip = is_tip_15(bill_value) ? bill_value * 0.15 : bill_value * 0.2;
+    console.log(
+      `The bill was ${bill_value}, the tip was ${bill_tip.toFixed(2)},and the total value ${(
+        bill_tip + bill_value
+      ).toFixed(2)}`,
+    );
+    //Test case 2
+    bill_value = 40;
+    bill_tip = is_tip_15(bill_value) ? bill_value * 0.15 : bill_value * 0.2;
+    console.log(
+      `The bill was ${bill_value}, the tip was ${bill_tip.toFixed(2)},and the total value ${(
+        bill_tip + bill_value
+      ).toFixed(2)}`,
+    );
+    //Test case 3
+    bill_value = 430;
+    bill_tip = is_tip_15(bill_value) ? bill_value * 0.15 : bill_value * 0.2;
+    console.log(
+      `The bill was ${bill_value}, the tip was ${bill_tip.toFixed(2)},and the total value ${(
+        bill_tip + bill_value
+      ).toFixed(2)}`,
+    );
+  </script>
+</html>

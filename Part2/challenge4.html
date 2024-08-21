@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Code challenge 4</h1>
+  </body>
+  <script>
+    const calcTip = (bill_value) => {
+      return (bill_value >= 50 && bill_value <= 300 ? bill_value * 0.15 : bill_value * 0.2).toFixed(
+        2,
+      );
+    };
+    let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+    let tips = [];
+    let total = [];
+    bills.map((bill_value) => {
+      tips.push(calcTip(bill_value));
+      total.push(bill_value + calcTip(bill_value));
+    });
+    console.log('🚀 ~ tips:', tips);
+    console.log('🚀 ~ total:', total);
+  </script>
+</html>

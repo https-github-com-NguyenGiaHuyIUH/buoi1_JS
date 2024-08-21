@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Code challenge 1</h1>
+  </body>
+  <script>;
+    const avgForTeam = (team_scores) => {
+      return (team_scores.reduce((value, total) => value + total) / 3).toFixed(2);
+    };
+    const checkWinner = (avgDol, avgKoa) => {
+      if (avgDol === avgKoa) return `Draw ${avgDol} vs. ${avgKoa}`;
+      else if (avgDol > avgKoa * 2) return `Dolphins win (${avgDol} vs. ${avgKoa})`;
+      else if(avgKoa > avgDol * 2);
+      return `Koalas win (${avgKoa} vs. ${avgDol})`;
+    };
+    checkWinner(avgForTeam([44, 23, 71]), avgForTeam([66, 54, 49]));
+    checkWinner(avgForTeam([85, 54, 41]), avgForTeam([23, 34, 27]));
+    console.log('🚀 ~ Test 1: ', checkWinner(avgForTeam([44, 23, 71]), avgForTeam([66, 54, 49])));
+    console.log('🚀 ~ Test 2:', checkWinner(avgForTeam([85, 54, 41]), avgForTeam([23, 34, 27])));
+  </script>
+</html>
